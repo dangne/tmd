@@ -1,0 +1,37 @@
+command:
+- ${env}
+- ${interpreter}
+- ${program}
+- ${args}
+- --dataset=imdb
+- --model_name=/root/manifold_defense/models/bert-base-uncased
+- --train_batch_size=64
+- --model_max_length=256
+- --num_epochs=10
+description: ''
+entity: none
+method: grid
+metric:
+  goal: maximize
+  name: validate/acc
+name: Finetune bert on imdb Dataset
+parameters:
+  lr:
+    values:
+    - 1.0e-06
+    - 3.0e-06
+    - 5.0e-06
+    - 7.0e-06
+    - 9.0e-06
+    - 1.0e-05
+    - 3.0e-05
+    - 5.0e-05
+    - 7.0e-05
+    - 9.0e-05
+    - 0.0001
+    - 0.0003
+    - 0.0005
+    - 0.0007
+    - 0.0009
+program: finetune.py
+project: none

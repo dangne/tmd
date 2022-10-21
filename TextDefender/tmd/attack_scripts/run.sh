@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sbatch yelppolarity_safer_xlnet_pwws_None_recmethod_3_from484_to656.sh
+sbatch yelppolarity_safer_xlnet_pwws_None_recmethod_3_from656_to828.sh
+sbatch yelppolarity_safer_xlnet_pwws_None_recmethod_3_from828_to1000.sh
+

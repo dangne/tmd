@@ -1,0 +1,67 @@
+command:
+- ${env}
+- ${interpreter}
+- ${program}
+- ${args}
+- --data=yelp_polarity
+- --lm=roberta
+- --lm_path=/root/manifold_defense/models/roberta-base-yelp_polarity
+- --gm=infogan
+- --gpus=0,
+- --train_batch_size=1024
+- --val_batch_size=512
+- --test_batch_size=512
+description: ''
+entity: none
+method: random
+metric:
+  goal: minimize
+  name: validate/rec_loss
+name: Hyperparameter Search for infogan on roberta-encoded yelp_polarity Dataset
+parameters:
+  code_dim:
+    values:
+    - 10
+    - 20
+    - 30
+    - 40
+  d_lr:
+    values:
+    - 7.0e-05
+    - 9.0e-05
+    - 0.0001
+    - 0.0003
+    - 0.0005
+    - 0.0007
+    - 0.0009
+    - 0.001
+  d_step_ratio:
+    values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  g_lr:
+    values:
+    - 1.0e-05
+    - 3.0e-05
+    - 5.0e-05
+    - 7.0e-05
+    - 9.0e-05
+    - 0.0001
+    - 0.0003
+    - 0.0005
+  latent_dim:
+    values:
+    - 50
+    - 100
+    - 200
+  p_lr:
+    values:
+    - 0
+    - 0.0001
+    - 0.001
+    - 0.01
+program: train.py
+project: none
