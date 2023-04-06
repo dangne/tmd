@@ -2,7 +2,7 @@
 
 This is the official GitHub repository for the following paper:
 
-> [**Textual Manifold-based Defense Against Natural Language Adversarial Examples.**](https://aclanthology.org/2022.emnlp-main.443/)
+> [**Textual Manifold-based Defense Against Natural Language Adversarial Examples.**](https://aclanthology.org/2022.emnlp-main.443/)  
 > Dang Minh Nguyen and Anh Tuan Luu.  
 > _Empirical Methods in Natural Language Processing (EMNLP)_, 2022. 
 
