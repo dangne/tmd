@@ -49,7 +49,7 @@ class EncodedDataModule(DataModule):
         num_workers: int = 4,
         setup_device: str = "cuda",
         layer: int = -1,
-        max_lself.hparams.seedength: int = 256,
+        max_length: int = 256,
         num_samples_for_pe: int = 1000000,
         seed=42,
         **kwargs,
